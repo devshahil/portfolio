@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahil Kumar | Portfolio</title>
+  <meta name="description" content="Shahil Kumar's personal portfolio. BCA student, gamer, reel lover, unemployed legend.">
+  <meta name="keywords" content="Shahil Kumar, portfolio, BCA student, gaming, funny resume, web developer">
+  <meta name="author" content="Shahil Kumar" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+    <h1 class="text-2xl font-bold">Shahil Kumar</h1>
+    <nav class="space-x-6">
+      <a href="#about" class="hover:text-teal-400">About</a>
+      <a href="#projects" class="hover:text-teal-400">Projects</a>
+      <a href="#skills" class="hover:text-teal-400">Skills</a>
+      <a href="#contact" class="hover:text-teal-400">Contact</a>
+    </nav>
+  </header>
+
+  
+ <!-- Hero Section -->
+<section class="text-center py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" data-aos="fade-up">
+    <!-- Profile Picture -->
+    <div class="w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden border-4 border-teal-400 shadow-lg">
+      <img src="IMG_20250503_123450.jpg" alt="Shahil Kumar" class="w-full h-full object-cover" />
+    </div>
+    <h2 class="text-5xl font-extrabold mb-4">Hi, I'm <span class="text-teal-400">Shahil Kumar</span></h2>
+    <p class="text-xl text-gray-300">A Professional Gamer & Meme Distributor</p>
+    <a href="#projects" class="mt-6 inline-block px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600">See My Projects</a>
+  </section>
+  
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto py-16 px-4" data-aos="fade-right">
+    <h3 class="text-3xl font-bold mb-6">About Me</h3>
+    <p class="text-gray-300 leading-relaxed">
+      I’m a BCA student with a deep interest in gaming, reels scrolling, and sending nonsense reels to my friends.
+      This portfolio is a showcase of why I am unemployed.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-gray-800 py-16 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-10">Projects</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-semibold mb-2">Meme Generator</h4>
+          <p class="text-gray-300">A fun project that creates random memes from an API. Because why not?</p>
+        </div>
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-semibold mb-2">Game Tracker</h4>
+          <p class="text-gray-300">Tracks your gaming stats and progress across multiple games.</p>
+        </div>
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-semibold mb-2">Reel Saver</h4>
+          <p class="text-gray-300">Saves and organizes all the reels you send your friends. You're welcome.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <!-- Skills -->
+<section id="skills" class="max-w-6xl mx-auto py-16 px-4 text-center" data-aos="fade-left">
+  <h3 class="text-3xl font-bold mb-6">My Favorite Games</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Game Card -->
+    <div>
+      <button onclick="playVideo('pubg')" class="bg-gray-800 p-4 rounded hover:bg-teal-500 w-full">PUBG</button>
+      <video id="pubg" class="mt-2 w-full rounded hidden" controls>
+        <source src="videos/pubg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div>
+      <button onclick="playVideo('farcry')" class="bg-gray-800 p-4 rounded hover:bg-teal-500 w-full">Far Cry 6</button>
+      <video id="farcry" class="mt-2 w-full rounded hidden" controls>
+        <source src="videos/farcry6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div>
+      <button onclick="playVideo('gtav')" class="bg-gray-800 p-4 rounded hover:bg-teal-500 w-full">GTA V</button>
+      <video id="gtav" class="mt-2 w-full rounded hidden" controls>
+        <source src="videos/gtav.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div>
+      <button onclick="playVideo('spiderman')" class="bg-gray-800 p-4 rounded hover:bg-teal-500 w-full">Spider-Man: Miles Morales</button>
+      <video id="spiderman" class="mt-2 w-full rounded hidden" controls>
+        <source src="videos/spiderman.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<script>
+  function playVideo(id) {
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach(video => {
+      if (video.id !== id) {
+        video.pause();
+        video.classList.add('hidden');
+      }
+    });
+
+    const selectedVideo = document.getElementById(id);
+    selectedVideo.classList.toggle('hidden');
+    if (!selectedVideo.classList.contains('hidden')) {
+      selectedVideo.play();
+    } else {
+      selectedVideo.pause();
+    }
+  }
+</script>
+
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-800 py-16 px-4 text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+    <p class="text-gray-300 mb-4">Email me at <a href="mailto:shahilkr001@gmail.com" class="text-teal-400 hover:underline">shahilkr001@gmail.com</a></p>
+    <div class="flex justify-center gap-4 mt-4">
+      <a href="https://www.instagram.com/ydv.shahil?igsh=ZHFiczFhNDV5ZGs2" class="hover:text-teal-400">Instagram</a>
+      <a href="https://github.com/devshahil" class="hover:text-teal-400">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500 bg-gray-900">
+    © 2025 Shahil Kumar. All rights reserved.
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+  </script>
+</body>
+</html>
